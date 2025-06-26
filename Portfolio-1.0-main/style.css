@@ -393,7 +393,7 @@ noscript {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  gap: 80px;
+  gap: 50px;
   color: var(--color-white);
 }
 
@@ -969,7 +969,7 @@ noscript {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 200px;
+  padding-top: 140px;
 }
 
 .about-section,
@@ -1229,12 +1229,15 @@ footer {
 }
 
 .faviconforProject {
-  width: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  object-fit: contain;
+  display: block;
 }
 
 .faviconforProjectAquaregia {
-  width: 20px;
+  width: 50px;
 }
 
 .image-div {
@@ -2045,5 +2048,148 @@ footer {
 
   .logos {
     gap: 20px;
+  }
+}
+
+
+.education-section-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 150px 0;
+}
+
+.education-section-container .projects-section-div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-section-container .section-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.education-section-container .section-heading-article {
+  font-size: 3rem;
+  font-family: fira code;
+  font-weight: 500;
+  background-image: linear-gradient(90deg,
+      var(--static-heading-gradient-blue),
+      var(--static-heading-gradient-pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education-section-container .sectionHeadingP {
+  width: 300px;
+  height: 1px;
+  background-image: linear-gradient(90deg,
+      var(--static-heading-gradient-blue),
+      var(--static-heading-gradient-pink));
+}
+
+
+.education-timeline-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.education-timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 450px;
+  bottom: 80px;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--color-purple), var(--color-light-blue));
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.education-box {
+  position: relative;
+  background-color: var(--tech-stack-box-first-color);
+  border: 1px solid var(--tech-stack-box-border-color);
+  z-index: 1;
+}
+
+
+.faviconforEducation {
+  width: 100px;
+  height: 60px;
+  border-radius: 20%;
+}
+
+.image-div1 {
+  width: 60%;
+  height: 120%;
+  padding-top: 70px;
+  padding-left: 10px;
+}
+
+.image-div1 img {
+  height: 100%;
+  border-top-left-radius: 30px;
+}
+
+
+
+
+.experience-section-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 140px 0;
+}
+
+/* .faviconforExperience {
+  width: 50px;
+  height: 50px;
+  border-radius: 60%;
+} */
+
+
+.faviconforExperience {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+  
+}
+
+
+.project-box2.experience-box {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--tech-stack-box-first-color);
+  border: 1px solid var(--tech-stack-box-border-color);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 100%;
+  width: 100%;
+  height: auto; /* Prevent fixed height */
+}
+
+.project-box-wrapper { 
+  margin-bottom: 30px; /* Reduce space between boxes */
+} 
+
+
+@media (max-width: 768px) {
+  .project-box2.experience-box {
+    padding: 15px;
+  }
+
+  .faviconforExperience {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
   }
 }
